@@ -2,9 +2,9 @@ export default function Contact() {
   return (
     <>
       <section className="contact">
-        <div className="line"/>
+        <div className="line" />
         <h1 className="padding text-[1.35rem]">Newsletter</h1>
-        <div className="line"/>
+        <div className="line" />
         <div className="flex flex-col gap-4 p-6 bg-striped justify-center items-center padding h-fit">
           <form className="flex items-end max-sm:flex-col sm:items-center gap-3 w-full">
             <label htmlFor="email" className="sr-only">Email address</label>
@@ -15,7 +15,7 @@ export default function Contact() {
             </div>
             <button type="submit" style={{
               width: "120px",
-              height:"44px"
+              height: "44px"
             }}
               className="shrink-0 grow-0 border h-full cursor-pointer rounded-xl border-border p-0.5 group disabled:opacity-50 disabled:cursor-not-allowed bg-white select-none">
               <div
@@ -25,7 +25,7 @@ export default function Contact() {
             </button>
           </form>
         </div>
-        <div className="line"/>
+        <div className="line" />
       </section>
 
       <div className="padding mx-2">
@@ -39,21 +39,21 @@ export default function Contact() {
           </svg>
 
           <blockquote className="text-[20px] sm:text-[30px] mb-6 px-2 font-semibold! italic text-title leading-relaxed">
-            "Do so much work that it would be unreasonable for you to not be successful."
+            "Any fool can write code that a computer can understand. Good programmers write code that humans can understand."
           </blockquote>
 
           <div className="flex items-center gap-4">
             <div className="h-px w-8 bg-black/20" />
             <span className="font-bold! tracking-widest uppercase opacity-60">
-              Alex Hormozi
+              Martin Fowler
             </span>
             <div className="h-px w-8 bg-black/20" />
           </div>
         </div>
       </div>
-      <div className="line"/>
+      <div className="line" />
       <div className="grid-holder">
-        <div className="grid"/>
+        <div className="grid" />
       </div>
     </>
   )

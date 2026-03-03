@@ -1,59 +1,21 @@
 "use client";
 
 import ImagePIP from "../Components/ImagePIP";
-import { useState, useRef, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { useTheme } from "next-themes";
+import Image from "next/image";
 
 function Hero() {
     const { resolvedTheme, setTheme } = useTheme();
     const [overlayActive, setOverlayActive] = useState(false);
-    const [glitchActive, setGlitchActive] = useState(false);
-
     const bubbleAudioRef = useRef<HTMLAudioElement>(null);
     const glitchAudioRef = useRef<HTMLAudioElement>(null);
 
-
-    const changeTheme = () => {
-        setOverlayActive(true);
-
-        if (bubbleAudioRef.current) {
-            bubbleAudioRef.current.currentTime = 0;
-            bubbleAudioRef.current.play().catch(() => { });
-        }
-
-        setTheme(resolvedTheme === "dark" ? "light" : "dark");
-        setTimeout(() => setOverlayActive(false), 300);
-    };
-
-    const handleToggle = () => {
-        if (glitchAudioRef.current) {
-            glitchAudioRef.current.currentTime = 0;
-            glitchAudioRef.current.play().catch(() => { });
-        }
-
-        setGlitchActive(true);
-        setIsNerfed((prev) => !prev);
-
-
-        setTimeout(() => {
-            setGlitchActive(false);
-        }, 600);
-    };
-
-
     const [isNerfed, setIsNerfed] = useState(false);
+    const [glitchKey, setGlitchKey] = useState(0);
+    const [isGlitching, setIsGlitching] = useState(false);
 
-
-    const profileImage = isNerfed
-        ? "/assets/Images/Phantom.jpg"
-        : "/assets/Images/Image";
-
-    const name = isNerfed ? "𝔠𝔞𝔯𝔫𝔦𝔣𝔢𝚡 ☬" : "Azianou Jacques";
-    const tickColor = isNerfed ? "#e8a807" : "#00aaff";
-
-    
     const [visibleIndex, setVisibleIndex] = useState(-1);
-
     const phrases = [
         "Software Engineer",
         "Indie hacker",
@@ -63,59 +25,93 @@ function Hero() {
         "Freelancer",
     ];
 
+    // Lightbox state
+    const [lightboxOpen, setLightboxOpen] = useState(false);
+    const lightboxRef = useRef<HTMLDivElement>(null);
+
     useEffect(() => {
-        const showFirst = setTimeout(() => {
-            setVisibleIndex(0);
-        }, 2200);
+        const showFirst = setTimeout(() => setVisibleIndex(0), 2200);
         return () => clearTimeout(showFirst);
     }, []);
 
     useEffect(() => {
         if (visibleIndex < 0) return;
-
         const cycle = setInterval(() => {
             setVisibleIndex((prev) => (prev + 1) % phrases.length);
         }, 3200);
-
         return () => clearInterval(cycle);
     }, [visibleIndex]);
+
+
+    const handleToggle = () => {
+        glitchAudioRef.current?.play().catch(() => { });
+        setIsNerfed((prev) => !prev);
+        setGlitchKey((prev) => prev + 1);
+        setIsGlitching(true);
+        setTimeout(() => setIsGlitching(false), 600);
+    };
+
+    const profileImage = isNerfed
+        ? "/assets/Images/JamesCD.webp"
+        : "/assets/Images/JamesBW.webp";
+    const name = isNerfed ? "𝔠𝔞𝔯𝔫𝔦𝔣𝔢𝚡 ☬" : "Azianou Jacques";
+    const tickColor = isNerfed ? "#e8a807" : "#00aaff";
+
+    // Close lightbox on click outside
+    useEffect(() => {
+        function handleClickOutside(e: MouseEvent) {
+            if (lightboxRef.current && !lightboxRef.current.contains(e.target as Node)) {
+                setLightboxOpen(false);
+            }
+        }
+        if (lightboxOpen) {
+            document.addEventListener("mousedown", handleClickOutside);
+        } else {
+            document.removeEventListener("mousedown", handleClickOutside);
+        }
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, [lightboxOpen]);
+
+    // Close lightbox on ESC key
+    useEffect(() => {
+        function handleKey(e: KeyboardEvent) {
+            if (e.key === "Escape") setLightboxOpen(false);
+        }
+        if (lightboxOpen) document.addEventListener("keydown", handleKey);
+        return () => document.removeEventListener("keydown", handleKey);
+    }, [lightboxOpen]);
 
     return (
         <>
             <div className="grid-holder">
                 <div className="grid"></div>
             </div>
-
             <div className="line" />
 
-            <section
-                className="hero flex justify-between padding"
-                aria-labelledby="hero-title"
-            >
+            <section className="hero flex justify-between padding" aria-labelledby="hero-title">
                 <div className="flex gap-3.5">
-
-                    <figure className="holder flex justify-center items-center rounded-2xl p-1 size-25">
-                        <img
-                            className={`main-img w-full h-full rounded-xl ${isNerfed ? "" : "glitch-image"
-                                }`}
+                    {/* Profile Image */}
+                    <figure className="holder relative w-24 h-24 rounded-2xl p-1 cursor-pointer">
+                        <Image
+                            key={glitchKey}
                             src={profileImage}
                             alt="Profile Image"
-                            loading="lazy"
-                            width={90}
-                            height={90}
+                            width={80}
+                            height={80}
+                            className={`rounded-xl ${isGlitching ? "glitch-image" : ""}`}
+                            onClick={() => setLightboxOpen(true)}
                         />
                     </figure>
 
-
+                    {/* Audio */}
                     <audio preload="auto" ref={glitchAudioRef} className="hidden">
                         <source src="/assets/sound/glitch.wav" type="audio/wav" />
                     </audio>
-
                     <audio preload="auto" ref={bubbleAudioRef} className="hidden">
                         <source src="/assets/sound/woosh.mp3" type="audio/mp3" />
                     </audio>
 
-
+                    {/* Info + Button */}
                     <div className="flex flex-col justify-between items-start">
                         <button
                             type="button"
@@ -129,12 +125,12 @@ function Hero() {
                         <div className="flex flex-col gap-0">
                             <div className="flex items-center">
                                 <h1
-                                    className={`main-img w-full h-full rounded-xl ${glitchActive ? "glitch-text" : ""}`}
+                                    key={glitchKey + "-text"}
+                                    className={`main-img w-full h-full rounded-xl ${isGlitching ? "glitch-text" : ""}`}
                                     id="hero-title"
                                 >
                                     {name}
                                 </h1>
-
 
                                 <svg
                                     xmlns="http://www.w3.org/2000/svg"
@@ -149,12 +145,9 @@ function Hero() {
                                 </svg>
                             </div>
 
-
                             <div className="relative h-5">
                                 <p
-                                    className={`text-[#71717b] text-sm font-light absolute inset-0 transition-all duration-1200 ease-out ${visibleIndex >= 0
-                                        ? "opacity-0 blur-sm"
-                                        : "opacity-100 blur-0"
+                                    className={`text-[#71717b] text-sm font-light absolute inset-0 transition-all duration-1200 ease-out ${visibleIndex >= 0 ? "opacity-0 blur-sm" : "opacity-100 blur-0"
                                         }`}
                                     aria-busy
                                     aria-hidden
@@ -165,9 +158,7 @@ function Hero() {
                                 {phrases.map((phrase, i) => (
                                     <p
                                         key={i}
-                                        className={`text-mutedForeground text-sm font-light absolute inset-0 transition-all duration-1200 ease-out ${i === visibleIndex
-                                            ? "opacity-100 blur-0"
-                                            : "opacity-0 blur-sm"
+                                        className={`text-mutedForeground text-sm font-light absolute inset-0 transition-all duration-1200 ease-out ${i === visibleIndex ? "opacity-100 blur-0" : "opacity-0 blur-sm"
                                             }`}
                                     >
                                         {phrase}
@@ -182,7 +173,6 @@ function Hero() {
                 <aside className="flex items-end justify-between flex-col">
                     <button
                         type="button"
-                        onClick={changeTheme}
                         className="group night flex items-center justify-center"
                         aria-label="Toggle theme"
                     >
@@ -201,13 +191,35 @@ function Hero() {
                     </button>
 
                     <div className="flex items-center gap-1" aria-label="Profile views">
-                        <img src="/Eye.svg" alt="eye icon" className="size-4.5 opacity-50" />
+                        <Image src="/Eye.svg" alt="eye icon" width={18} height={18} className="opacity-50" />
                         <p className="text-mutedForeground">2.2k</p>
                     </div>
                 </aside>
             </section>
 
             <ImagePIP />
+
+            {/* Lightbox Modal */}
+            {lightboxOpen && (
+                <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/50 p-4">
+                    <div ref={lightboxRef} className="relative max-w-[90vw] max-h-[90vh]">
+                        <Image
+                            src={profileImage}
+                            alt="Profile Preview"
+                            width={400}
+                            height={400}
+                            className="rounded-xl object-contain"
+                        />
+                        <button
+                            className="absolute top-2 right-2 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center"
+                            onClick={() => setLightboxOpen(false)}
+                            aria-label="Close lightbox"
+                        >
+                            ✕
+                        </button>
+                    </div>
+                </div>
+            )}
         </>
     );
 }

@@ -188,8 +188,7 @@ h4 {
 
 img,
 video {
-  user-select: none;
-  pointer-events: none;
+
 }
 
 .text-mutedForeground {

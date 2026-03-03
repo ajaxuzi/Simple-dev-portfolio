@@ -69,4 +69,9 @@ yarn-error.log*
 .DS_Store
 
 # TypeScript
-*.tsbuildinfo
+*.tsbuildinfonode_modules/
+dist/
+.next/ # For Next.js
+node_modules/
+dist/
+.next/

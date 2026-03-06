@@ -672,6 +672,29 @@ mark {
   stroke: #fff;
 }
 
-@utility .button-about{
-  @apply font-medium text-sm py-[.5em] sm:px-4 px-3.75 hover:bg-[#e0e0e0] bg-[#f0f0f0] rounded-lg cursor-pointer flex items-center justify-center gap-2.5
+.button-about {
+  font-weight: 500;
+  font-size: 0.875rem;
+  padding-top: 0.5em;
+  padding-bottom: 0.5em;
+  padding-left: 0.9375rem;
+  padding-right: 0.9375rem;
+  background-color: #f0f0f0;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+}
+
+.button-about:hover {
+  background-color: #e0e0e0;
+}
+
+@media (min-width: 640px) {
+  .button-about {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }

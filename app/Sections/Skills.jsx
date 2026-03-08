@@ -1,68 +1,56 @@
 import Image from "next/image";
 import Link from "next/link";
-
-const skills = [
-    { name: "React", href: "https://react.dev", icon: "/assets/SVG/react.svg" },
-    { name: "Next", href: "https://nextjs.org", icon: "/assets/SVG/next.svg" },
-    { name: "Expo", href: "https://expo.dev", icon: "/assets/SVG/expo.svg" },
-    { name: "Django", href: "https://djangoproject.com", icon: "/assets/SVG/django.svg" },
-    { name: "Express", href: "https://expressjs.com", icon: "/assets/SVG/express.svg" },
-    { name: "Node", href: "https://nodejs.org", icon: "/assets/SVG/node.svg" },
-    { name: "Bun", href: "https://bun.sh", icon: "/assets/SVG/bun.svg" },
-    { name: "PostgreSQL", href: "https://postgresql.org", icon: "/assets/SVG/postgresql.svg" },
-    { name: "MongoDB", href: "https://mongodb.com", icon: "/assets/SVG/mongodb.svg" },
-    { name: "Redis", href: "https://redis.io", icon: "/assets/SVG/redis.svg" },
-    { name: "Prisma", href: "https://prisma.io", icon: "/assets/SVG/prisma.svg" },
-    { name: "Zustand", href: "https://zustand-demo.pmnd.rs", icon: "/assets/SVG/zustand.svg" },
-    { name: "Tanstack Query", href: "https://tanstack.com/query", icon: "/assets/SVG/tanstack-query.svg" },
-    { name: "Postman", href: "https://postman.com", icon: "/assets/SVG/postman.svg" },
-    { name: "Tailwind", href: "https://tailwindcss.com", icon: "/assets/SVG/tailwind.svg" },
-    { name: "Shadcn", href: "https://ui.shadcn.com", icon: "/assets/SVG/shadcn.svg" },
-    { name: "Framer Motion", href: "https://framer.com/motion", icon: "/assets/SVG/framer-motion.svg" },
-    { name: "GSAP", href: "https://gsap.com", icon: "/assets/SVG/gsap.svg" },
-    { name: "JavaScript", href: "https://developer.mozilla.org/en-US/docs/Web/JavaScript", icon: "/assets/SVG/javascript.svg" },
-    { name: "TypeScript", href: "https://typescriptlang.org", icon: "/assets/SVG/typescript.svg" },
-    { name: "Java", href: "https://java.com", icon: "/assets/SVG/java.svg" },
-    { name: "Python", href: "https://python.org", icon: "/assets/SVG/python.svg" },
-    { name: "SQL", href: "https://en.wikipedia.org/wiki/SQL", icon: "/assets/SVG/sql.svg" },
-    { name: "Git", href: "https://git-scm.com", icon: "/assets/SVG/git.svg" },
-    { name: "GitHub", href: "https://github.com", icon: "/assets/SVG/github.svg" },
-    { name: "Figma", href: "https://figma.com", icon: "/assets/SVG/figma.svg" },
-    { name: "Docker", href: "https://docker.com", icon: "/assets/SVG/docker.svg" },
-    { name: "Linux", href: "https://linux.org", icon: "/assets/SVG/linux.svg" },
-];
-
 export default function Skills() {
     return (
         <section className="TechStack">
             <h1 className="padding text-[1.35rem] font-bold">
                 Skills and Technologies
             </h1>
-
             <div className="line" />
-
             <div className="flex flex-wrap my-3 md:gap-2.5 gap-1.5 items-center justify-center padding">
-                {skills.map(({ name, href, icon }) => (
-                    <Link
-                        key={name}
-                        href={href}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                    >
-                        <span className="min-w-fit w-full skill group relative flex-1 flex cursor-pointer items-center justify-center gap-2 overflow-hidden rounded-lg border border-black/20! px-2 py-1 transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10 select-none max-w-fit">
-                            <Image
-                                alt={name}
-                                src={icon}
-                                width={16}
-                                height={16}
-                                loading="eager"
-                                className="group-hover:opacity-100 opacity-65 size-4 mt-0.5"
-                            />
-                            {name}
-                        </span>
-                    </Link>
-                ))}
-            </div>
+                                       <Link href="https://react.dev" target="_blank" rel="noopener noreferrer">
+                    <span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
+                        <Image alt="React"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/React.svg" />
+                        React
+                    </span>
+                </Link>
+
+                                       <Link href="https://nextjs.org" target="_blank" rel="noopener noreferrer">
+                    <span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
+                        <Image alt="Next"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Next.svg" />
+                        Next
+                    </span>
+                </Link>
+
+
+                                       <Link href="https://expo.dev" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Expo"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Expo.svg" />Expo</span></Link>
+                <Link href="https://djangoproject.com" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Django"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Django.svg" />Django</span></Link>
+                <Link href="https://expressjs.com" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Express"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Express.svg" />Express</span></Link>
+                <Link href="https://nodejs.org" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Node"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Node.svg" />Node</span></Link>
+                <Link href="https://bun.sh" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Bun"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Bun.svg" />Bun</span></Link>
+                <Link href="https://postgresql.org" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="PostgreSQL"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/PostgreSQL.svg" />PostgreSQL</span></Link>
+                <Link href="https://mongodb.com" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="MongoDB"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/MongoDB.svg" />MongoDB</span></Link>
+                <Link href="https://redis.io" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Redis"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Redis.svg" />Redis</span></Link>
+                <Link href="https://prisma.io" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Prisma"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Prisma.svg" />Prisma</span></Link>
+                <Link href="https://zustand-demo.pmnd.rs" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Zustand"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Zustand.svg" />Zustand</span></Link>
+                <Link href="https://tanstack.com/query" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Transact Query" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/tanstack-query.svg" />Transact Query</span></Link>
+                <Link href="https://postman.com" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Postman"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Postman.svg" />Postman</span></Link>
+                <Link href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Tailwind"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Tailwind.svg" />Tailwind</span></Link>
+                <Link href="https://ui.shadcn.com" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Shadcn"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Shadcn.svg" />Shadcn</span></Link>
+                <Link href="https://framer.com/motion" target="_blank" rel="noopener noreferrer">
+                <span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
+                <Image alt="Framer Motion"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/framer-motion.svg" />Framer</span></Link><Link href="https://gsap.com" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="GSAP"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/GSAP.svg" />GSAP</span></Link><Link href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="JavaScript"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/JavaScript.svg" />JavaScript</span></Link><Link href="https://typescriptlang.org" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="TypeScript"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/TypeScript.svg" />TypeScript</span></Link>
+                
+                <Link href="https://java.com" target="_blank" rel="noopener noreferrer">
+                <span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Java"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Java.svg" />Java</span></Link><Link href="https://python.org" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Python"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Python.svg" />Python</span></Link>
+
+                <Link href="https://en.wikipedia.org/wiki/SQL" target="_blank" rel="noopener noreferrer">
+                    <span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
+                        <Image alt="SQL"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/SQL.svg" />SQL</span></Link><Link href="https://git-scm.com" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Git"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Git.svg" />Git</span></Link><Link href="https://github.com" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Github"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Github.svg" />Github</span></Link><Link href="https://figma.com" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Figma"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Figma.svg" />Figma</span></Link>
+                        <Link href="https://docker.com" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
+                            <Image alt="Docker"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Docker.svg" />Docker</span></Link>               <Link href="https://linux.org" target="_blank" rel="noopener noreferrer"><span className="  border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
+                                <Image alt="Linux"loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Linux.svg" />Linux</span></Link>
+                                </div>
         </section>
-    );
+    )
 }

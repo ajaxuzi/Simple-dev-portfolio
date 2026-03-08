@@ -12,7 +12,7 @@ export default function About() {
             </p>
 
             <div className="flex gap-2.5 mt-4">
-                <button className=" py-[.5em] px-4 bg-[#52525C] text-white rounded-lg flex items-center gap-2.5">
+                <button className=" py-[.5em] px-4 bg-[#404040] text-white rounded-lg flex items-center gap-2.5">
                     <Image
                         src="/Calendar.svg"
                         width={20}

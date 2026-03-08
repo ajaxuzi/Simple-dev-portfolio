@@ -1,7 +1,7 @@
 @import "tailwindcss";
 
 :root {
-  --text-color: #454545;
+  --text-color: #282828;
   --text-mute: #9f9f9f;
   --border-border: var(--line-color);
   --line-color: #d2d2d2;
@@ -415,7 +415,7 @@ button:hover {
   }
 
   .smaller-hide {
-    display: none;
+    display: none !important;
   }
 }
 
@@ -697,4 +697,19 @@ mark {
     padding-left: 1rem;
     padding-right: 1rem;
   }
+}
+
+.skill-stack {
+  min-width: fit;
+  width: 100%;
+  user-select: none;
+  max-width: 100%;
+  display: flex;
+  flex: 1;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  overflow: hidden;
+  border-radius: 0.45rem;
 }

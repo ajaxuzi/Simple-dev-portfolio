@@ -13,6 +13,7 @@ function Hero() {
     const [visibleIndex, setVisibleIndex] = useState(-1);
     const phrases = [
         "Design Enginner",
+        "TypeScript Enthusiast",
         "Indie hacker",
         "UI/UX designer",
         "Frontend developer",
@@ -92,7 +93,7 @@ function Hero() {
                             alt="Profile Image"
                             width={80}
                             height={80}
-                            className={`rounded-xl object-cover object-top w-21.5 h-21.5 ${isGlitching ? "glitch-image" : ""}`}
+                            className={`rounded-xl object-cover select-none object-top w-21.5 h-21.5 ${isGlitching ? "glitch-image" : ""}`}
                             onClick={() => setLightboxOpen(true)}
                         />
                     </figure>
@@ -157,7 +158,7 @@ function Hero() {
                                 {phrases.map((phrase, i) => (
                                     <p
                                         key={i}
-                                        className={`text-mutedForeground text-sm font-light absolute inset-0 transition-all duration-1200 ease-out ${i === visibleIndex ? "opacity-100 blur-0" : "opacity-0 blur-sm"
+                                        className={`text-mutedForeground text-sm font-light absolute inset-0 transition-all duration-1200 ease-out select-none ${i === visibleIndex ? "opacity-100 blur-0" : "opacity-0 blur-sm"
                                             }`}
                                     >
                                         {phrase}
@@ -185,7 +186,7 @@ function Hero() {
                         }
                     </button>
 
-                    <div className="flex items-center gap-1" aria-label="Profile views">
+                    <div className="flex items-center gap-1 select-none" aria-label="Profile views">
                         <Image src="/Eye.svg" alt="eye icon" width={18} height={18} className="opacity-50" loading="eager" />
                         <p className="text-mutedForeground">2.2k</p>
                     </div>
@@ -193,7 +194,7 @@ function Hero() {
             </section>
 
             {lightboxOpen && (
-                <div className="fixed inset-0 z-100000 flex items-center justify-center bg-black/50 p-4 w-dvw h-dvh">
+                <div className="fixed inset-0 z-9999 flex items-center justify-center bg-black/50 p-4 w-dvw h-dvh">
                     <div ref={lightboxRef} className="relative max-w-[90vw] max-h-[90vh]">
                         <Image
                             src={profileImage}
@@ -201,7 +202,7 @@ function Hero() {
                             loading="eager"
                             width={400}
                             height={400}
-                            className="rounded-xl object-contain"
+                            className="rounded-xl size-100 object-cover object-top"
                         />
                         <button
                             className="absolute top-2 right-2 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center"

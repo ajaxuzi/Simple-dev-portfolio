@@ -26,7 +26,7 @@ export default function Experience() {
 
                         <div className="flex flex-col gap-1">
                             <span className="flex align-center gap-4">
-                                <p className="sm:text-[1.20rem] text-[1.05rem] leading-[0.90] font-semibold blur-xs">Why boi?</p>
+                                <h1 className="sm:text-[1.20rem] text-[1.05rem] leading-[0.90]  blur-[3.75px] font-bold">Chakam 📸</h1>
                                 <div className="cont smaller-hide">
                                     6 months
                                 </div>

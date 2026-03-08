@@ -39,13 +39,13 @@ export default function Contact() {
           </svg>
 
           <blockquote className="text-[20px] sm:text-[30px] mb-6 px-2 font-semibold! italic text-title leading-relaxed">
-            "Only diffrence in Trial and Triumph is just a little Umph!"
+            "First, solve the problem. Then, write the code."
           </blockquote>
 
           <div className="flex items-center gap-4">
             <div className="h-px w-8 bg-black/20" />
             <span className="font-bold! tracking-widest uppercase opacity-75">
-              Baby boss
+              John Johnson
             </span>
             <div className="h-px w-8 bg-black/20" />
           </div>

@@ -163,7 +163,8 @@ function Hero() {
                                     </p>
                                 ))}
 
-                                <p className=" flex items-center sm:hidden text-[#71717b] text-sm"><span className="font-sans">@</span>codebynerf.exe</p>
+                                <p className=" flex items-center justify-center sm:hidden text-[#71717b] text-sm">
+                                    <span className="font-sans">@</span>codebynerf.exe</p>
                             </div>
                         </div>
                     </div>

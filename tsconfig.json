@@ -29,6 +29,6 @@
     ".next/types/**/*.ts",
     ".next/dev/types/**/*.ts",
     "**/*.mts"
-, "app/Sections/index.jsx", "app/Components/GitHubContributionGraph.jsx"  ],
+, "app/Sections/index.jsx", "app/Components/GitHubContributionGraph.tsx"  ],
   "exclude": ["node_modules"]
 }

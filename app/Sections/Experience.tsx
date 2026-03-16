@@ -6,7 +6,6 @@ export default function Experience() {
     const [isOpen, setIsOpen] = useState(true);
     const bodyRef = useRef(null);
 
-    
     return (
         <section>
             <div className="line" />
@@ -16,10 +15,9 @@ export default function Experience() {
             <div className="line" />
 
             <div className="padding">
-
                 <article>
                     <div
-                        className="p-2 select-none cursor-pointer  flex justify-between  hover:bg-black/5"
+                        className="p-2 select-none cursor-pointer flex justify-between hover:bg-black/5"
                         onClick={() => setIsOpen((prev) => !prev)}
                     >
                         <div className="main flex gap-2">
@@ -29,7 +27,7 @@ export default function Experience() {
 
                             <div className="flex flex-col gap-1">
                                 <span className="flex align-center gap-4">
-                                    <h1 className="sm:text-[1.20rem] text-[1.05rem] leading-[0.90]  blur-[3.75px] font-bold">Cmon bruv</h1>
+                                    <h1 className="sm:text-[1.20rem] text-[1.05rem] leading-[0.90] blur-[3.75px] font-bold">Cmon bruv</h1>
                                     <div className="cont smaller-hide">
                                         6 months
                                     </div>
@@ -66,41 +64,42 @@ export default function Experience() {
 
                     <div
                         ref={bodyRef}
-                        className="experience-body ml-2 overflow-hidden transition-all duration-400 ease-in-out"
+                        className="experience-body ml-2 transition-all duration-500 ease-in-out"
                         style={{
-                            Height: isOpen ? "500px" : "0px",
+                            display: "grid",
+                            gridTemplateRows: isOpen ? "1fr" : "0fr",
                             opacity: isOpen ? 1 : 0,
                         }}
                     >
-                        <ul className="flex flex-col gap-3 w-full my-4 mx-auto" style={{ color: "lab(29.82% 0.42 0.14)" }}>
-                            <li className="small-hide point">
-                                Owned the core presentation editor, driving major performance and reliability improvements
-                            </li>
-                            <li className="point">
-                                Designed and built core editor features like drag-and-drop, resize, and keyboard shortcuts end-to-end
-                            </li>
-                            <li className="small-hide point">
-                                Owned a foundational refactor, strengthening a critical codebase to enable safer and faster production
-                            </li>
-                            <li className="point">
-                                Drove major Drive page performance improvements, resolving bugs to deliver faster, reliable experiences
-                            </li>
-                        </ul>
+                        <div className="overflow-hidden">
+                            <ul className="flex flex-col gap-3 w-full my-4 mx-auto" style={{ color: "lab(29.82% 0.42 0.14)" }}>
+                                <li className="small-hide point">
+                                    Owned the core presentation editor, driving major performance and reliability improvements
+                                </li>
+                                <li className="point">
+                                    Designed and built core editor features like drag-and-drop, resize, and keyboard shortcuts end-to-end
+                                </li>
+                                <li className="small-hide point">
+                                    Owned a foundational refactor, strengthening a critical codebase to enable safer and faster production
+                                </li>
+                                <li className="point">
+                                    Drove major Drive page performance improvements, resolving bugs to deliver faster, reliable experiences
+                                </li>
+                            </ul>
 
-                        <div className="flex flex-wrap gap-2 pb-4">
-                            <span className="cont">Next</span>
-                            <span className="cont">Tailwind</span>
-                            <span className="cont">Typescript</span>
-                            <span className="cont">Javascript</span>
-                            <span className="cont">Postgres SQL</span>
-                            <span className="cont">Docker</span>
-                            <span className="cont">Figma</span>
+                            <div className="flex flex-wrap gap-2 pb-4">
+                                <span className="cont">Next</span>
+                                <span className="cont">Tailwind</span>
+                                <span className="cont">Typescript</span>
+                                <span className="cont">Javascript</span>
+                                <span className="cont">Postgres SQL</span>
+                                <span className="cont">Docker</span>
+                                <span className="cont">Figma</span>
+                            </div>
                         </div>
                     </div>
                 </article>
             </div>
-
-
         </section>
     );
 }

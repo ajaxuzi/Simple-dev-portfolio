@@ -1,11 +1,13 @@
+import Button from "../Components/Button";
 import XPostCard from "../Components/XPostCard";
 
 export default function ThoughtsPage() {
     return (
-        <section className="padding">
-            <h1 className="text-[1.35rem] mb-6">Recent thoughts from X</h1>
+        <section>
+            <h1 className="padding text-[1.35rem]">Blogs</h1>
+            <div className="line" />
 
-            <div className="space-y-8">
+            <div className="experience mx-auto">
                 <XPostCard
                     tweetId="1723990780145184971"
                     title="Building my portfolio with Next.js & Tailwind – lessons learned"
@@ -13,7 +15,7 @@ export default function ThoughtsPage() {
                     readTimeOrClaps="120"
                     tags={["Next.js", "Portfolio", "Frontend"]}
                 />
-
+                <div className="line" />
                 <XPostCard
                     tweetId="YOUR_SECOND_TWEET_ID"
                     title="Just shipped a cool drag-and-drop editor feature"
@@ -21,9 +23,22 @@ export default function ThoughtsPage() {
                     readTimeOrClaps="85"
                     tags={["React", "UI", "OpenSource"]}
                 />
-
-                {/* Add more as needed */}
+                <div className="line" />
+                <XPostCard
+                    tweetId="YOUR_SECOND_TWEET_ID"
+                    title="My C# Journey "
+                    date="Dec 2025"
+                    readTimeOrClaps="1000"
+                    tags={["React", "UI", "OpenSource"]}
+                />
             </div>
+
+            <div className="line" />
+            <div className="size-full flex items-center justify-center p-2.5">
+                <Button text={"More Blogs"} dir={"/Blogs"} fontsize={"15px"} />
+            </div>
+
+
         </section>
     );
 }

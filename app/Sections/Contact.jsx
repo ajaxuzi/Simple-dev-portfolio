@@ -1,4 +1,4 @@
-"use client";
+import Button from "../Components/Button";
 
 export default function Contact() {
   return (
@@ -9,7 +9,7 @@ export default function Contact() {
         <div className="line" />
 
         <div className="flex flex-col gap-4 p-6 bg-striped justify-center items-center padding h-fit">
-          <form className="flex items-end max-sm:flex-col sm:items-center gap-3 w-full max-w-xl mx-auto">
+          <form className="flex items-end max-sm:flex-col sm:items-center gap-3 w-full  mx-auto">
             <label htmlFor="emailLabel" className="sr-only">
               Email address
             </label>
@@ -26,7 +26,7 @@ export default function Contact() {
                 autoComplete="email"
                 required
                 className="
-                  flex-1 h-full px-4 
+                  h-full px-4 
                   placeholder:select-none rounded-xl w-full 
                   border border-border bg-white text-foreground 
                   focus:outline-none focus:ring-0 focus:border-ring 
@@ -34,36 +34,12 @@ export default function Contact() {
                   transition-all duration-300 
                   placeholder:text-gray-500 
                   placeholder:opacity-100
-                  dark:placeholder:text-gray-400
-                  dark:bg-gray-900
-                  dark:border-gray-700
-                  dark:text-gray-100
+           
                 "
               />
             </div>
 
-            <button
-              type="submit"
-              style={{ width: "120px", height: "44px" }}
-              className="
-                shrink-0 border cursor-pointer rounded-xl 
-                border-border p-0.5 group 
-                disabled:opacity-50 disabled:cursor-not-allowed 
-                bg-white select-none
-              "
-            >
-              <div
-                className="
-                  flex size-full gap-1 items-center justify-center rounded-xl 
-                  border border-border w-full h-full 
-                  bg-[#5c5c5c] text-white 
-                  group-hover:bg-[#4a4a4a] 
-                  transition duration-300
-                "
-              >
-                <span className="text-[0.95rem] font-medium">Subscribe</span>
-              </div>
-            </button>
+            <Button text={"Subscribe"} fontsize={"15px"} />
           </form>
         </div>
 

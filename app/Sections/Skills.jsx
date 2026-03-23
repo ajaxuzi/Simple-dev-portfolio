@@ -12,7 +12,7 @@ export default function Skills() {
             <fieldset className="flex flex-wrap my-3 md:gap-2 gap-1.5 items-center justify-center padding">
                 <Link href="https://react.dev" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="React" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/React.svg" />
+                        <Image alt="React" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/React.svg" />
                         React
                     </span>
                 </Link>
@@ -20,7 +20,7 @@ export default function Skills() {
 
                 <Link href="https://nextjs.org" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Next" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Next.svg" />
+                        <Image alt="Next" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Next.svg" />
                         Next
                     </span>
                 </Link>
@@ -28,7 +28,7 @@ export default function Skills() {
 
                 <Link href="https://expo.dev" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Expo" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Expo.svg" />
+                        <Image alt="Expo" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Expo.svg" />
                         Expo
                     </span>
                 </Link>
@@ -36,7 +36,7 @@ export default function Skills() {
 
                 <Link href="https://djangoproject.com" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Django" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Django.svg" />
+                        <Image alt="Django" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Django.svg" />
                         Django
                     </span>
                 </Link>
@@ -44,7 +44,7 @@ export default function Skills() {
 
                 <Link href="https://expressjs.com" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Express" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Express.svg" />
+                        <Image alt="Express" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Express.svg" />
                         Express
                     </span>
                 </Link>
@@ -52,7 +52,7 @@ export default function Skills() {
 
                 <Link href="https://nodejs.org" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Node" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Node.svg" />
+                        <Image alt="Node" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Node.svg" />
                         Node
                     </span>
                 </Link>
@@ -60,21 +60,21 @@ export default function Skills() {
 
                 <Link href="https://bun.sh" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Bun" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Bun.svg" />
+                        <Image alt="Bun" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Bun.svg" />
                         Bun
                     </span>
                 </Link>
 
 
                 <Link href="https://postgresql.org" target="_blank" rel="noopener noreferrer">
-                    <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="PostgreSQL" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/PostgreSQL.svg" />
+                    <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="PostgreSQL" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/PostgreSQL.svg" />
                         PostgreSQL
                     </span>
                 </Link>
 
 
                 <Link href="https://mongodb.com" target="_blank" rel="noopener noreferrer">
-                    <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="MongoDB" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/MongoDB.svg" />
+                    <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="MongoDB" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/MongoDB.svg" />
                         MongoDB
                     </span>
                 </Link>
@@ -82,7 +82,7 @@ export default function Skills() {
 
                 <Link href="https://redis.io" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Redis" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Redis.svg" />
+                        <Image alt="Redis" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Redis.svg" />
                         Redis
                     </span>
                 </Link>
@@ -90,7 +90,7 @@ export default function Skills() {
 
                 <Link href="https://prisma.io" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Prisma" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Prisma.svg" />
+                        <Image alt="Prisma" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Prisma.svg" />
                         Prisma
                     </span>
                 </Link>
@@ -98,7 +98,7 @@ export default function Skills() {
 
                 <Link href="https://zustand-demo.pmnd.rs" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Zustand" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Zustand.svg" />
+                        <Image alt="Zustand" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Zustand.svg" />
                         Zustand
                     </span>
                 </Link>
@@ -106,7 +106,7 @@ export default function Skills() {
 
                 <Link href="https://tanstack.com/query" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Transact Query" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/tanstack-query.svg" />
+                        <Image alt="Transact Query" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/tanstack-query.svg" />
                         Transact Query
                     </span>
                 </Link>
@@ -114,7 +114,7 @@ export default function Skills() {
 
                 <Link href="https://postman.com" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Postman" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Postman.svg" />
+                        <Image alt="Postman" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Postman.svg" />
                         Postman
                     </span>
                 </Link>
@@ -122,14 +122,14 @@ export default function Skills() {
 
                 <Link href="https://tailwindcss.com" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Tailwind" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Tailwind.svg" />
+                        <Image alt="Tailwind" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Tailwind.svg" />
                         Tailwind
                     </span>
                 </Link>
 
 
                 <Link href="https://ui.shadcn.com" target="_blank" rel="noopener noreferrer">
-                    <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Shadcn" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Shadcn.svg" />
+                    <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Shadcn" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Shadcn.svg" />
                         Shadcn
                     </span>
                 </Link>
@@ -137,7 +137,7 @@ export default function Skills() {
 
                 <Link href="https://framer.com/motion" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Framer Motion" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/framer-motion.svg" />
+                        <Image alt="Framer Motion" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/framer-motion.svg" />
                         Framer
                     </span>
                 </Link>
@@ -145,7 +145,7 @@ export default function Skills() {
 
                 <Link href="https://gsap.com" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="GSAP" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/GSAP.svg" />
+                        <Image alt="GSAP" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/GSAP.svg" />
                         GSAP
                     </span>
                 </Link>
@@ -153,7 +153,7 @@ export default function Skills() {
 
                 <Link href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="JavaScript" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/a.svg" />
+                        <Image alt="JavaScript" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/a.svg" />
                         JavaScript
                     </span>
                 </Link>
@@ -161,7 +161,7 @@ export default function Skills() {
 
                 <Link href="https://typescriptlang.org" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                    <Image alt="TypeScript" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/u.svg" />
+                    <Image alt="TypeScript" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/u.svg" />
                         TypeScript
                     </span>
                 </Link>
@@ -169,7 +169,7 @@ export default function Skills() {
 
                 <Link href="https://java.com" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Java" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Java.svg" />
+                        <Image alt="Java" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Java.svg" />
                         Java
                     </span>
                 </Link>
@@ -177,7 +177,7 @@ export default function Skills() {
 
                 <Link href="https://python.org" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Python" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Python.svg" />
+                        <Image alt="Python" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Python.svg" />
                         Python
                     </span>
                 </Link>
@@ -185,7 +185,7 @@ export default function Skills() {
 
                 <Link href="https://en.wikipedia.org/wiki/SQL" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="SQL" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/SQL.svg" />
+                        <Image alt="SQL" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/SQL.svg" />
                         SQL
                     </span>
                 </Link>
@@ -193,14 +193,14 @@ export default function Skills() {
 
                 <Link href="https://git-scm.com" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Git" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Git.svg" />
+                        <Image alt="Git" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Git.svg" />
                         Git
                     </span>
                 </Link>
 
 
                 <Link href="https://github.com" target="_blank" rel="noopener noreferrer">
-                    <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Github" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Github.svg" />
+                    <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack"><Image alt="Github" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Github.svg" />
                         Github
                     </span>
                 </Link>
@@ -208,7 +208,7 @@ export default function Skills() {
 
                 <Link href="https://figma.com" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Figma" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Figma.svg" />
+                        <Image alt="Figma" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Figma.svg" />
                         Figma
                     </span>
                 </Link>
@@ -216,7 +216,7 @@ export default function Skills() {
 
                 <Link href="https://docker.com" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Docker" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Docker.svg" />
+                        <Image alt="Docker" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Docker.svg" />
                         Docker
                     </span>
                 </Link>
@@ -224,7 +224,7 @@ export default function Skills() {
 
                 <Link href="https://linux.org" target="_blank" rel="noopener noreferrer">
                     <span className="border border-black/20!  transition-all duration-300 hover:text-black hover:border-black! hover:bg-black/10  px-2 py-1 skill-stack">
-                        <Image alt="Linux" loading="eager" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Linux.svg" />
+                        <Image alt="Linux" loading="lazy" width={16} height={16} className="group-hover:opacity-100 opacity-65 size-4 mt-0.5" src="/assets/SVG/Linux.svg" />
                         Linux
                     </span>
                 </Link>

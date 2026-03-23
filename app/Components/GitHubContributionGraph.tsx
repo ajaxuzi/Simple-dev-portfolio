@@ -60,8 +60,8 @@ export default function GitHubContributionGraph() {
     }
   });
 
-  if (loading) return <p style={{ opacity: 0.7 }}>Loading GitHub activity...</p>;
-  if (error) return <p style={{ color: "#ff5555" }}>Error: {error}</p>;
+  if (loading) return <p style={{ opacity: 0.8, marginTop: "10px" }}>Loading GitHub activity...</p>;
+  if (error) return <p style={{ color: "#ff5555", marginTop:"10px" }}>The issue is: {error}</p>;
 
   return (
     <article className="padding p-0! mt-5! select-none">
@@ -83,7 +83,7 @@ export default function GitHubContributionGraph() {
             ))}
           </div>
 
-          {/* Graph */}
+
           <div style={{ display: "flex", gap: CELL_GAP }}>
             {weeks.map((week, wi) => (
               <div key={wi} style={{ display: "flex", flexDirection: "column", gap: CELL_GAP }}>

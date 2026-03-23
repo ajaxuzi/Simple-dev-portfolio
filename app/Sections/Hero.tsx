@@ -20,7 +20,7 @@ function Hero() {
         "Backend developer",
         "Full stack developer",
         "Logic and Problem Solving",
-        "codebynerf.exe",
+        "codebyajax",
         "Freelancer",
     ];
 
@@ -52,7 +52,7 @@ function Hero() {
     const profileImage = isNerfed
         ? "/assets/Images/JamesCD.PNG"
         : "/assets/Images/JamesBW.PNG";
-    const name = isNerfed ? "codebynerf.exe" : "Jacques Azainou Komi";
+    const name = isNerfed ? "codebyajax" : "Jacques Azainou Komi";
     const tickColor = isNerfed ? "#e8a807" : "#00aaff";
 
     useEffect(() => {
@@ -86,7 +86,7 @@ function Hero() {
                         <Image
                             key={glitchKey}
                             src={profileImage}
-                            loading="eager"
+                            loading="lazy"
                             alt="Profile Image"
                             width={96}
                             height={96}
@@ -150,7 +150,7 @@ function Hero() {
                                     aria-busy
                                     aria-hidden
                                 >
-                                    codebynerf.exe
+                                    codebyajax
                                 </p>
 
                                 {phrases.map((phrase, i) => (
@@ -164,7 +164,7 @@ function Hero() {
                                 ))}
 
                                 <p className=" flex items-center justify-center sm:hidden text-[#71717b] text-sm">
-                                    <span className="font-sans">@</span>codebynerf.exe</p>
+                                    <span className="font-sans">@</span>codebyajax</p>
                             </div>
                         </div>
                     </div>
@@ -188,7 +188,7 @@ function Hero() {
                     </button>
 
                     <div className="flex items-center gap-1 select-none" aria-label="Profile views">
-                        <Image src="/Eye.svg" alt="eye icon" width={18} height={18} className="opacity-50" loading="eager" />
+                        <Image src="/Eye.svg" alt="eye icon" width={18} height={18} className="opacity-50" loading="lazy" />
                         <p className="text-mutedForeground">2.2k</p>
                     </div>
                 </aside>
@@ -200,7 +200,7 @@ function Hero() {
                         <Image
                             src={profileImage}
                             alt="Profile Preview"
-                            loading="eager"
+                            loading="lazy"
                             width={400}
                             height={400}
                             className="rounded-xl size-100 object-cover object-top"

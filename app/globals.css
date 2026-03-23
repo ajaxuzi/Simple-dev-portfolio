@@ -106,6 +106,9 @@ body {
     right top;
   max-width: 690px;
   width: 100%;
+}
+.experience {
+  max-width: 690px;
   width: 100%;
 }
 
@@ -366,6 +369,10 @@ button:hover {
     max-width: 768px;
     width: 100%;
   }
+  .experience {
+    width: 100%;
+    max-width: 768px;
+  }
   .padding {
     max-width: 768px;
     width: 100%;
@@ -383,6 +390,10 @@ button:hover {
   .overlay {
     max-width: 1024px;
     width: 100%;
+  }
+  .experience {
+    width: 100%;
+    max-width: 1022px;
   }
   .padding {
     max-width: 1024px;
@@ -422,6 +433,10 @@ button:hover {
 
   .smaller-hide {
     display: none !important;
+  }
+
+  .experience {
+    width: 95vw;
   }
 }
 
@@ -739,4 +754,8 @@ mark {
   margin-bottom: 0.6rem;
   text-indent: -0.97em;
   line-height: 140%;
+}
+
+.text-invert {
+  filter: invert(1) brightness(150%);
 }

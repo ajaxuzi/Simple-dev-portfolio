@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
+import Button from "../Components/Button"
 
 type ExperienceItem = {
     companyName: string;
@@ -33,8 +34,8 @@ const experiences: ExperienceItem[] = [
     },
 
     {
-        companyName: "TechNova Solutions",
-        companyImage: "/assets/Images/technova-logo.png",
+        companyName: "Ehizua College",
+        companyImage: "/assets/Images/GSOC.png",
         role: "Frontend Developer",
         duration: "1 year 4 months",
         period: "Mar 2024 – Jul 2025",
@@ -43,14 +44,14 @@ const experiences: ExperienceItem[] = [
             "Led development of a customer-facing dashboard used by +40k monthly active users",
             "Implemented real-time collaboration features using WebSockets and Zustand",
             "Reduced initial page load time by 47% through lazy-loading and image optimization",
-            "Mentored 2 junior developers and conducted bi-weekly code reviews",
+            "Mentored 8 junior developers and conducted bi-weekly code reviews",
         ],
         technologies: ["React", "Next.js", "Zustand", "Tailwind CSS", "TypeScript", "WebSockets", "Vercel"],
     },
 
     {
         companyName: "PaySwift Nigeria",
-        companyImage: "/assets/Images/payswift.png",
+        companyImage: "/assets/Images/Owasp.png",
         role: "Full-Stack Engineer (Intern → Full-time)",
         duration: "10 months",
         period: "Apr 2023 – Jan 2024",
@@ -66,7 +67,7 @@ const experiences: ExperienceItem[] = [
 ];
 
 export default function Experience() {
-    const [openIndex, setOpenIndex] = useState<number | null>(0); // first one open by default
+    const [openIndex, setOpenIndex] = useState<number | null>(0);
 
     const toggle = (index: number) => {
         setOpenIndex(openIndex === index ? null : index);
@@ -78,27 +79,26 @@ export default function Experience() {
             <h1 className="padding text-[1.35rem]">Experience</h1>
             <div className="line" />
 
-            <div className="padding">
+            <div className="experience  mx-auto">
                 {experiences.map((exp, index) => {
                     const isOpen = openIndex === index;
 
                     return (
                         <div key={index}>
-                            {/* Horizontal line between experiences (skipped before first one) */}
                             {index > 0 && <div className="line" />}
 
-                            <article className={index > 0 ? "mt-6" : ""}>
+                            <article className={"p-1"}>
                                 <div
-                                    className="p-2 select-none cursor-pointer flex justify-between hover:bg-black/5"
+                                    className="p-4 select-none cursor-pointer flex justify-between hover:bg-black/5"
                                     onClick={() => toggle(index)}
                                 >
-                                    <div className="main flex gap-2">
+                                    <div className="main flex gap-2 items-center">
                                         <figure className="size-12 shrink-0 rounded-[10px] p-0.5 overflow-hidden border">
                                             <Image
                                                 src={exp.companyImage}
                                                 width={45}
                                                 height={45}
-                                                priority={index === 0}
+                                                loading="lazy"
                                                 className="size-full rounded-lg border object-cover"
                                                 alt={`${exp.companyName} logo`}
                                             />
@@ -106,13 +106,16 @@ export default function Experience() {
 
                                         <div className="flex flex-col gap-1">
                                             <span className="flex items-center gap-4">
-                                                <h1 className="sm:text-[1.20rem] text-[1.05rem] leading-[0.90] font-bold">
+                                                <h1 className="sm:text-[1.20rem] text-[1.05rem] leading-[0.90] font-bold"
+                                                    style={exp.isPresent ? { filter: "Blur(4px)" } : { filter: "" }}>
+
+
                                                     {exp.companyName}
-                                                    {exp.isPresent && <span className="text-green-600 text-sm ml-1.5">(present)</span>}
                                                 </h1>
-                                                <div className="cont smaller-hide">{exp.duration}</div>
+                                                {exp.isPresent && <div className="cont smaller-hide">{exp.duration} </div>}
+
                                             </span>
-                                            <p className="text-[.9rem] opacity-75">{exp.role}</p>
+                                            <p className="text-[.9rem] opacity-75">{exp.role} </p>
                                         </div>
                                     </div>
 
@@ -154,7 +157,7 @@ export default function Experience() {
                                         opacity: isOpen ? 1 : 0,
                                     }}
                                 >
-                                    <div className="overflow-hidden">
+                                    <div className="overflow-hidden pl-3">
                                         <ul
                                             className="flex flex-col gap-1.5 w-full my-4 text-[14px]"
                                             style={{ color: "lab(29.82% 0.42 0.14)" }}
@@ -180,6 +183,11 @@ export default function Experience() {
                     );
                 })}
             </div>
+            <div className="line" />
+            <div className="size-full flex items-center justify-center p-2.5 opacity-40" aria-hidden aria-busy inert>
+                <Button text={"More coming..."} dir={"/#"} fontsize={"15px"}/>
+            </div>
+            <div className="line" />
         </section>
     );
 }

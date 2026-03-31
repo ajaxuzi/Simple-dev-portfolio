@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import { useState } from "react";
-import Button from "../Components/Button"
+import Button from "../Components/button"
 
 type ExperienceItem = {
     companyName: string;
@@ -185,7 +185,7 @@ export default function Experience() {
             </div>
             <div className="line" />
             <div className="size-full flex items-center justify-center p-2.5 opacity-40" aria-hidden aria-busy inert>
-                <Button text={"More coming..."} dir={"/#"} fontsize={"15px"}/>
+                <Button text={"More coming..."} dir={"/#"} fontsize={"15px"} />
             </div>
             <div className="line" />
         </section>

@@ -58,7 +58,6 @@ html {
 
 html,
 body {
-  overflow-x: hidden;
   letter-spacing: -0.02em;
   font-family: var(--font-instagram);
   font-weight: 600;
@@ -67,6 +66,7 @@ body {
 body {
   background-color: var(--dark-bg);
   color: var(--text-color);
+  overflow-x: hidden;
 }
 
 .overlay {
@@ -140,7 +140,7 @@ sup {
   font-size: 80%;
 }
 
-.grid img {
+.grid-spot img {
   height: calc(424px / 3);
   width: calc(1186px / 2);
   position: absolute;
@@ -277,7 +277,7 @@ button:hover {
   background-color: rgb(255, 255, 255);
 }
 
-.dark .grid {
+.dark .grid-spot {
   background-image: radial-gradient(var(--dark-line) 1.2px, transparent 1.2px);
 }
 
@@ -427,7 +427,7 @@ button:hover {
     padding: 1rem 2rem;
   }
 
-  .grid {
+.grid-spot   {
     min-height: 100px;
   }
 

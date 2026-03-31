@@ -1,4 +1,4 @@
-import Button from "../Components/Button";
+import Button from "../Components/button";
 
 export default function Contact() {
   return (
@@ -61,14 +61,15 @@ export default function Contact() {
             <path d="M464 256h-80v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8c-88.4 0-160 71.6-160 160v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48zm-288 0H96v-64c0-35.3 28.7-64 64-64h8c13.3 0 24-10.7 24-24V56c0-13.3-10.7-24-24-24h-8C71.6 32 0 103.6 0 192v240c0 26.5 21.5 48 48 48h128c26.5 0 48-21.5 48-48V304c0-26.5-21.5-48-48-48z" />
           </svg>
 
-          <blockquote className="text-[20px] sm:text-[30px] mb-6 px-2 font-semibold italic text-title leading-relaxed">
-            "First, solve the problem. Then, write the code."
+          <blockquote className="text-[20px] sm:text-[30px] mb-6 px-2 font-bold! italic text-title leading-relaxed">
+            "Do so much work that it would be unreasonable
+            for you to not be successful."
           </blockquote>
 
           <div className="flex items-center gap-4">
             <div className="h-px w-8 bg-black/20" />
-            <span className="font-bold tracking-widest uppercase opacity-75">
-              John Johnson
+            <span className="font-bold! tracking-widest uppercase opacity-75">
+              Alex Hormozi
             </span>
             <div className="h-px w-8 bg-black/20" />
           </div>

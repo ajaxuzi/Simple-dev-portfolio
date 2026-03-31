@@ -12,7 +12,7 @@ function Hero() {
 
     const [visibleIndex, setVisibleIndex] = useState(-1);
     const phrases = [
-        "Design Enginner",
+        "Design Engineer",
         "TypeScript Enthusiast",
         "Indie hacker",
         "UI/UX designer",
@@ -38,7 +38,7 @@ function Hero() {
             setVisibleIndex((prev) => (prev + 1) % phrases.length);
         }, 3200);
         return () => clearInterval(cycle);
-    }, [visibleIndex]);
+    }, [phrases.length, visibleIndex < 0]);
 
 
     const handleToggle = () => {
@@ -81,7 +81,7 @@ function Hero() {
         <>
             <div className="line" />
             <section className="hero flex sm:justify-between justify-center padding" aria-labelledby="hero-title">
-                <div className="flex gap-3.5 flex-col h-fit w-fit sm:flex-row">
+                <div className="flex gap-3.5 flex-col h-fit w-fit sm:flex-row mt-3 md:mt-0">
                     <figure className="holder overflow-hidden relative w-24 h-24 sm:rounded-2xl rounded-full flex justify-center items-center cursor-pointer mx-auto sm:mx-0 p-[2.5px] ">
                         <Image
                             key={glitchKey}
@@ -90,7 +90,7 @@ function Hero() {
                             alt="Profile Image"
                             width={96}
                             height={96}
-                            className={`rounded-full sm:rounded-xl object-cover hover:brightness-90 transition-al duration-300 select-none object-top size-full ${isGlitching ? "glitch-image" : ""}`}
+                            className={`rounded-full sm:rounded-xl object-cover hover:brightness-90 transition-all duration-300 select-none object-top size-full ${isGlitching ? "glitch-image" : ""}`}
                             onClick={() => setLightboxOpen(true)}
                         />
                     </figure>
@@ -110,12 +110,13 @@ function Hero() {
                             aria-label="Change personality"
                         >
                             {isNerfed ?
-
-                                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="opacity-90" height="12" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M448 256c0-106-86-192-192-192l0 384c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"></path></svg>
-
+                                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="opacity-90" height="12" width="12" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M448 256c0-106-86-192-192-192l0 384c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" />
+                                </svg>
                                 :
-
-                                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="opacity-90 rotate-120 hover:text-foreground transition-all duration-300" height="12" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M222.7 32.1c5 16.9-4.6 34.8-21.5 39.8C121.8 95.6 64 169.1 64 256c0 106 86 192 192 192s192-86 192-192c0-86.9-57.8-160.4-137.1-184.1c-16.9-5-26.6-22.9-21.5-39.8s22.9-26.6 39.8-21.5C434.9 42.1 512 140 512 256c0 141.4-114.6 256-256 256S0 397.4 0 256C0 140 77.1 42.1 182.9 10.6c16.9-5 34.8 4.6 39.8 21.5z"></path></svg>
+                                <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="opacity-90 rotate-120 hover:text-foreground transition-all duration-300" height="12" width="12" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M222.7 32.1c5 16.9-4.6 34.8-21.5 39.8C121.8 95.6 64 169.1 64 256c0 106 86 192 192 192s192-86 192-192c0-86.9-57.8-160.4-137.1-184.1c-16.9-5-26.6-22.9-21.5-39.8s22.9-26.6 39.8-21.5C434.9 42.1 512 140 512 256c0 141.4-114.6 256-256 256S0 397.4 0 256C0 140 77.1 42.1 182.9 10.6c16.9-5 34.8 4.6 39.8 21.5z" />
+                                </svg>
                             }
                         </button>
 
@@ -134,7 +135,7 @@ function Hero() {
                                     width="20"
                                     height="20"
                                     viewBox="0 0 20 20"
-                                    className="ml-0.5 size-6! tick"
+                                    className="ml-0.5 size-6 tick"
                                     style={{ fill: tickColor }}
                                 >
                                     <title>Verified</title>
@@ -147,8 +148,8 @@ function Hero() {
                                 <p
                                     className={`text-[#71717b] text-sm font-light hidden sm:block  transition-all duration-1200 ease-out ${visibleIndex >= 0 ? "opacity-0 blur-sm" : "opacity-100 blur-0"
                                         }`}
-                                    aria-busy
-                                    aria-hidden
+                                    aria-busy="true"
+                                    aria-hidden="true"
                                 >
                                     codebyajax
                                 </p>
@@ -179,16 +180,16 @@ function Hero() {
                     >
                         {isNerfed ?
 
-                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="opacity-90 mb-1.25" height="12" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M448 256c0-106-86-192-192-192l0 384c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z"></path></svg>
+                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="opacity-90 mb-1.25" height="12" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M448 256c0-106-86-192-192-192l0 384c106 0 192-86 192-192zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256z" /></svg>
 
                             :
 
-                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="opacity-90 mb-1.25 rotate-120 hover:text-foreground transition-all duration-300" height="12" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M222.7 32.1c5 16.9-4.6 34.8-21.5 39.8C121.8 95.6 64 169.1 64 256c0 106 86 192 192 192s192-86 192-192c0-86.9-57.8-160.4-137.1-184.1c-16.9-5-26.6-22.9-21.5-39.8s22.9-26.6 39.8-21.5C434.9 42.1 512 140 512 256c0 141.4-114.6 256-256 256S0 397.4 0 256C0 140 77.1 42.1 182.9 10.6c16.9-5 34.8 4.6 39.8 21.5z"></path></svg>
+                            <svg stroke="currentColor" fill="currentColor" strokeWidth="0" viewBox="0 0 512 512" className="opacity-90 mb-1.25 rotate-120 hover:text-foreground transition-all duration-300" height="12" width="12" xmlns="http://www.w3.org/2000/svg"><path d="M222.7 32.1c5 16.9-4.6 34.8-21.5 39.8C121.8 95.6 64 169.1 64 256c0 106 86 192 192 192s192-86 192-192c0-86.9-57.8-160.4-137.1-184.1c-16.9-5-26.6-22.9-21.5-39.8s22.9-26.6 39.8-21.5C434.9 42.1 512 140 512 256c0 141.4-114.6 256-256 256S0 397.4 0 256C0 140 77.1 42.1 182.9 10.6c16.9-5 34.8 4.6 39.8 21.5z" /></svg>
                         }
                     </button>
 
                     <div className="flex items-center gap-1 select-none" aria-label="Profile views">
-                        <Image src="/Eye.svg" alt="eye icon" width={18} height={18} className="opacity-50" loading="lazy" />
+                        <Image src="/assets/svg/Eye.svg" alt="eye icon" width={18} height={18} className="opacity-50" loading="lazy" />
                         <p className="text-mutedForeground">2.2k</p>
                     </div>
                 </aside>
@@ -203,15 +204,16 @@ function Hero() {
                             loading="lazy"
                             width={400}
                             height={400}
-                            className="rounded-xl size-100 object-cover object-top"
+                            className="rounded-xl w-100 h-100 object-cover object-top pointer-events-none select-none"
                         />
                         <button
-                            className="absolute top-2 right-2 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center"
+                            className="absolute cursor-pointer top-2 right-2 text-white bg-black/50 rounded-full w-8 h-8 flex items-center justify-center"
                             onClick={() => setLightboxOpen(false)}
                             aria-label="Close lightbox"
                         >
                             ✕
                         </button>
+
                     </div>
                 </div>
             )}

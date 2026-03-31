@@ -1,11 +1,11 @@
-import Grid from "./Components/Grid"
-import Hero from "./Sections/Hero";
-import About from "./Sections/About";
-import Experience from "./Sections/Experience"
-import Projects from "./Sections/Projects";
-import Blog from "./Sections/Blog";
-import Skills from "./Sections/Skills.jsx"
-import Contact from "./Sections/Contact"
+import Grid from "./Components/grid"
+import Hero from "./Sections/hero";
+import About from "./Sections/about";
+import Experience from "./Sections/experience"
+import Projects from "./Sections/project";
+import Blog from "./Sections/blog";
+import Skills from "./Sections/skill.jsx"
+import Contact from "./Sections/contact"
 import { Analytics } from "@vercel/analytics/next"
 
 export default function page() {
